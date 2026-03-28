@@ -1,5 +1,8 @@
 from abc import ABC, abstractmethod
 import numpy as np
+"""
+интефейс лоссов - ничего интересного
+"""
 
 class AbstractLoss(ABC):
     @abstractmethod

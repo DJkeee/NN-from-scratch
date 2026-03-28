@@ -1,8 +1,9 @@
 import numpy as np
-import abstract_loss
+from numpy import floating
+from loss_functions.abstract_loss import AbstractLoss
 
-class MSELoss(abstract_loss.AbstractLoss):
-    def forward(self, predict: np.ndarray, target: np.ndarray) -> np.float64:
+class MSELoss(AbstractLoss):
+    def forward(self, predict: np.ndarray, target: np.ndarray) -> floating:
         self.is_dims_equal(predict, predict)
         return np.mean((predict - target) ** 2)
 
